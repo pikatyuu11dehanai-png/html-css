@@ -8,3 +8,16 @@ setInterval(() => {
   target.classList.add("shake");
 }, Math.random() * 2000 + 500);
 }
+const targets = document.querySelectorAll('.fadein');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+targets.forEach(target => {
+  observer.observe(target);
+});
