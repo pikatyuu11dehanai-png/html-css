@@ -1,6 +1,13 @@
-body {
- 
-  background: #f0f8ff;
+
+ body {
+  margin: 0;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  background: #97c9f5;
   color: #333;
 font-family: Source Code Pro;
 }
@@ -71,4 +78,43 @@ p {
   transform: translate(-50%, -50%);
   transition: transform 0.05s linear;
 }
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 9000px;
+}
+.grid-box div {
+  background: rgb(196, 225, 255);
+  border-radius: 100px;
+  padding: 50px;
+  text-align: center;
+  transition: 1s;
+}
+.grid-box div:hover {
+  animation: aa 0.3s ease-in-out;
+}
+
+@keyframes aa {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(0.8) rotate(3deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  75% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+
+
+
 
