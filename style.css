@@ -83,14 +83,15 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 30px;
   width: 100%;
-  max-width: 9000px;
+ 
+  
 }
 .grid-box div {
   background: rgb(196, 225, 255);
   border-radius: 100px;
   padding: 50px;
   text-align: center;
-  transition: 1s;
+  transition: 0.3s;
 }
 .grid-box div:hover {
   animation: aa 0.3s ease-in-out;
