@@ -1,0 +1,10 @@
+this.関数 = function(引数) {
+
+const target = document.getElementById("shake");
+
+setInterval(() => {
+  target.classList.remove("shake");
+  void target.offsetWidth; // リセット用
+  target.classList.add("shake");
+}, Math.random() * 2000 + 500);
+}

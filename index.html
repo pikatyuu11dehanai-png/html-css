@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<title>めたもんブログ</title>
+</head>
+<body>
+<h1 class="metamon">めたもんブログ</h1>
+
+<p>うねおたです</p>
+<p>めたもん好きですか？</p>
+<p>メタモンでもﾒﾀﾓﾝでも構いません。</p>
+<p>好きですか？</p>
+<p>まあ別に好きでも嫌いでもいいです。</p>
+<p>てかちょっと文字ちっちゃくないですか？</p>
+<h3>これでどうでしょう</h3>
+<h3>色とかも変わってますね</h3>
+<h2>超しつこい文つきです</h2>
+<h2>在庫処分でしょうか、邪魔すぎますね</h2>
+<h3>でも、このしつこい文...</h3>
+<h2>🐠🐬🐙</h2>
+<h3>背景色にマッチしてますね</h3>
+<h1 class="metamon">🐬</h1>
+<img class="a" src="https://cdn.discordapp.com/attachments/1451550518530015313/1451550518953381980/image.png?ex=69926384&is=69911204&hm=020fa7de36fb54989c2adf448acb3e4304ac6555914cfd9d077b6380e68b2a10&">
+
+<div id="cursor-text">👍</div>
+<script>
+  const text = document.getElementById("cursor-text");
+
+  let x = 0, y = 0;
+  let targetX = 0, targetY = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+  });
+
+  function animate() {
+    x += (targetX - x) * 0.05;
+    y += (targetY - y) * 0.05;
+
+    text.style.left = x + "px";
+    text.style.top = y + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+
+</html>

@@ -1,0 +1,74 @@
+body {
+ 
+  background: #f0f8ff;
+  color: #333;
+font-family: Source Code Pro;
+}
+h2 {
+   animation: metamon 0.5s infinite ease-in-out;
+    text-align: center;
+    font-weight:bold; /* 太さを太字に指定 */
+    color: rgb(77, 110, 152); /* 文字色を赤に指定 */
+}
+.a {
+    width: 150px;
+animation: aaa 5s infinite ease-in-out;
+}
+
+h3 {
+    text-align: center;
+  
+ /* 太さを太字に指定 */
+    color: rgb(65, 147, 255); /* 文字色を赤に指定 */
+}
+p {
+  text-align: center;
+
+}
+
+
+
+
+.box:hover {
+  transform: scale(1.1);
+}
+.title {
+  color: rgb(133, 222, 255);
+}
+
+@keyframes metamon {
+  0%   { transform: rotate(-10deg) }
+  50%  { transform: translateY(-10px); }
+  100% { transform: rotate(10deg); }
+}
+@keyframes aaa {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-6px) rotate(3deg); }
+  50%  { transform: translateY(-10px) rotate(0deg); }
+  75%  { transform: translateY(-6px) rotate(-3deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.metamon {
+   
+    text-align: center;
+
+  display: inline-block;
+  transition: transform 0.6s ease-in-out;
+}
+
+.metamon:hover{
+  transform: rotate(360deg);
+}
+#cursor-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4d6d;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear;
+}
+
