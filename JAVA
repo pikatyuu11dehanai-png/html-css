@@ -17,7 +17,8 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
+const btn = document.getElementById("go");
 
-targets.forEach(target => {
-  observer.observe(target);
+btn.addEventListener("click", () => {
+  window.location.href = "https://www.hackforplay.xyz/users/otcm5ggCSyZCmnDW7D4M389BXE12";
 });
