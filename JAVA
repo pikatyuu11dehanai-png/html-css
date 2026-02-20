@@ -22,3 +22,49 @@ const btn = document.getElementById("go");
 btn.addEventListener("click", () => {
   window.location.href = "https://www.hackforplay.xyz/users/otcm5ggCSyZCmnDW7D4M389BXE12";
 });
+let point = 0;
+let pointふえる = 1;
+const area = document.getElementById("click-area");
+const score = document.getElementById("score");
+
+area.addEventListener("click", (e) => {
+  point += pointふえる;              // ← 数値を増やす
+  score.textContent = point+'pt';  // ← 画面に反映！！
+
+  const plus = document.createElement("div");
+  plus.className = "plus";
+if(point<=50){
+  plus.textContent = "+1pt";
+}
+    if(point>=50){
+        plus.textContent = "+2pt";
+pointふえる=2
+  }
+    if(point>=100){
+pointふえる=4
+plus.textContent = "+4pt";
+  }
+    if(point>=200){
+pointふえる=6
+plus.textContent = "+6pt";
+  }
+    if(point>=400){
+pointふえる=8
+plus.textContent = "+8pt";
+  }
+    if(point>=800){
+pointふえる=10
+plus.textContent = "+10pt";
+  }
+
+  plus.style.left = e.clientX + "px";
+  plus.style.top  = e.clientY + "px";
+
+  document.body.appendChild(plus);
+
+  setTimeout(() => {
+    plus.remove();
+  }, 800);
+
+
+});
