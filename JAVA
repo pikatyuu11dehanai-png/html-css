@@ -1,4 +1,4 @@
-this.関数 = function(引数) {
+function 関数(引数) {
 
 const target = document.getElementById("shake");
 
