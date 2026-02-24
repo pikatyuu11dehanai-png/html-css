@@ -1,15 +1,3 @@
-function 関数(引数) {
-
-const target = document.getElementById("shake");
-
-setInterval(() => {
-  target.classList.remove("shake");
-  void target.offsetWidth; // リセット用
-  target.classList.add("shake");
-}, Math.random() * 2000 + 500);
-}
-const targets = document.querySelectorAll('.fadein');
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -67,4 +55,119 @@ plus.textContent = "+10pt";
   }, 800);
 
 
+});
+const targetDate = new Date("2026-03-19T06:00:00+09:00");
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = targetDate - now;
+
+  if (diff <= 0) {
+    document.getElementById("countdown").textContent = "卒業おめでとう！";
+    return;
+  }
+
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+  const syuu = Math.floor(diff / (1000 * 60 * 60 * 24 * 7));
+  const hiniti = Math.floor((diff / (1000 * 60 * 60 * 24)) % 7);
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+
+  document.getElementById("countdown").textContent =
+    `卒業式まで、あと ${syuu}週間${hiniti}日${hours}時間 ${minutes}分 ${seconds}`;
+
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+ 
+function omikuzi() {
+  const min = 1;
+const max = 100;
+const rand = Math.floor(Math.random() * (max - min + 1)) + min;
+
+  const min2 = 1;
+const max2 = 4;
+const rand2 = Math.floor(Math.random() * (max2 - min2 + 1)) + min2;
+
+if(rand>95){
+ 
+  if(rand2===1){
+ document.getElementById("omikuzi").textContent =
+  '大吉！！！何してもうまくいくよ！'
+  }else if(rand2===2){
+     document.getElementById("omikuzi").textContent =
+  '大吉！！！家にアラブの石油王が来るよ！'
+  }else if(rand2===3){
+     document.getElementById("omikuzi").textContent =
+  '大吉！！！めっちゃ頭よくなるよ！'
+  }else if(rand2===4){
+     document.getElementById("omikuzi").textContent =
+  '大吉！！！自分だけでなく周りの人も健康になるよ！'
+  }
+}else if(rand>70){
+ if(rand2===1){
+ document.getElementById("omikuzi").textContent =
+  '中吉！！！何してもほどほどにうまくいくよ！'
+  }else if(rand2===2){
+     document.getElementById("omikuzi").textContent =
+  '中吉！！！自販機でだれかがお釣りを取り忘れていたかも…！'
+  }else if(rand2===3){
+     document.getElementById("omikuzi").textContent =
+  '中吉！！！難しいテストがすらすら解ける！'
+  }else if(rand2===4){
+     document.getElementById("omikuzi").textContent =
+  '中吉！！！明日すっきり起きられる！！'
+  }
+}else if(rand>50){
+ if(rand2===1){
+ document.getElementById("omikuzi").textContent =
+  '小吉！！！何してもちょっとうまくいくかもよ！'
+  }else if(rand2===2){
+     document.getElementById("omikuzi").textContent =
+  '中吉！！！おこづかいがもらえるかも！'
+  }else if(rand2===3){
+     document.getElementById("omikuzi").textContent =
+  '中吉！！！ひらめき力があがる！'
+  }else if(rand2===4){
+     document.getElementById("omikuzi").textContent =
+  '中吉！！！とくに変わりはないけど健康になった気分！'
+  }
+}else if(rand>30){
+ if(rand2===1){
+ document.getElementById("omikuzi").textContent =
+  '凶…新しい挑戦はやめておこう…'
+  }else if(rand2===2){
+     document.getElementById("omikuzi").textContent =
+  '凶…お釣り足りなかったかも！？'
+  }else if(rand2===3){
+     document.getElementById("omikuzi").textContent =
+  '凶…ぜんぜん授業についていけない…'
+  }else if(rand2===4){
+     document.getElementById("omikuzi").textContent =
+  '凶…喉がイガイガする…'
+  }
+}
+else {
+ if(rand2===1){
+ document.getElementById("omikuzi").textContent =
+  '大凶…何してもうまくいかない…'
+  }else if(rand2===2){
+     document.getElementById("omikuzi").textContent =
+  '大凶…あれ？財布盗まれた！？'
+  }else if(rand2===3){
+     document.getElementById("omikuzi").textContent =
+  '大凶…テスト10点…'
+  }else if(rand2===4){
+     document.getElementById("omikuzi").textContent =
+  '大凶…頭も痛いし鼻水出るしだるいし咳出るしお腹痛いし腰痛いし肩痛いし喉痛いしめまいもする…でも熱はないから休めない…'
+  }
+}
+  }
+  omikuzi()
+  document.addEventListener("DOMContentLoaded", () => {
+  omikuzi();
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 });
