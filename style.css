@@ -257,3 +257,41 @@ font-family: 'Press Start 2P', cursive;
   border-radius: 10px;
    box-shadow: 0 5px 15px rgba(0, 149, 255, 0.45);
 }
+
+.nav {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #111;
+}
+
+.nav button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.nav button:hover {
+  background: #555;
+}
+#copy{
+ padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;  
+}#copy:active{
+animation: aaaaa 0.5s 1 ease;
+}
+@keyframes aaaaa {
+  
+   0% { transform: scale(1)  }
+     50% { transform: scale(1.5)  }
+  100% { transform: scale(1)  }
+}
