@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+ <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>めたもん！</title>
+
+</head>
+<body>
+    
+<nav class="ppap">
+  <ul>
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="jiko.html">自己紹介</a></li>
+    <li><a href="sakuhin.html">作品</a></li>
+    <li><a href="gimiku.html">ギミック</a></li>
+  <li><a href="situmon.html">質問</a></li>
+    <li><a href="sonota.html">その他</a></li>
+  </ul>
+</nav>
+<div id="copy">ここを押して、ペーストして友達に送ろう！</div>
+<div id="click-area">めたもんズクリッカー？</div>
+<div id="countdown"></div>
+<div id="omikuzi">おみくじ！100pt！</div>
+<div id="score">0pt</div>
+<h1 class="metamon">🐬</h1>
+<h1 class="bokashi">これ読める？</h1>
+<h1 class="hikaru">触ると光る！</h1>
+
+
+
+  
+
+<element class="konnitiha">
+  
+    <span>波</span>
+      <span>打</span>
+        <span>つ</span>
+          <span>よ</span>
+            <span>！</span>
+              </element>
+<img class="a" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoFRF1P_d0bqMCWEEYe7Gjy2CLTNDcPCsNwvjuuvIZOiGP6mnAoakFCX_KK2zpHwDuF7AMd8kCK_wpBSTeOuhe-US_dABPeNJckWIg_qTb2y4caOYK4fDoVTNhyhdd_lTwSN1GdGuCV0cOndhTrMmMEMhOEwglex47eQHvd9cZZfvjTBz93Qi5KYgQdtsk/s925/eto_centaur_hatsuhinode.png">
+<div class="grid-box">
+  <div>あああ</div>
+  <div>いいい</div>
+  <div>ううう</div>
+  <div>えええ</div>
+  <div>おおお</div>
+</div>
+<div id="cursor-text">👍</div>
+<script>
+  const text = document.getElementById("cursor-text");
+
+  let x = 0, y = 0;
+  let targetX = 0, targetY = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+  });
+
+  function animate() {
+    x += (targetX - x) * 0.05;
+    y += (targetY - y) * 0.05;
+
+    text.style.left = x + "px";
+    text.style.top = y + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+
+  <script src="JAVA.js"></script>
+</body>
+</html>

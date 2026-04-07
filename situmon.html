@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+ <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>めたもん！</title>
+
+</head>
+<body>
+
+<nav class="ppap">
+  <ul>
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="jiko.html">自己紹介</a></li>
+    <li><a href="sakuhin.html">作品</a></li>
+    <li><a href="gimiku.html">ギミック</a></li>
+  <li><a href="situmon.html">質問</a></li>
+    <li><a href="sonota.html">その他</a></li>
+  </ul>
+</nav>
+<h1 class="metamon">質問</h1>
+<h3>ぼかしてある文字にタッチすれば回答が見れます。
+    質問したい方はその他にある質問募集フォームに書いてください。
+</h3>
+<div class="カード">
+<p class="Q">Sさん　行ってみたい国は？</p>
+<p class="A">韓国のメタモンランドみたいなところ行きたいです。</p>
+</div>
+<p></p>
+<div class="カード">
+<p class="Q">Oさん　ハックフォープレイいつ更新する？</p>
+<p class="A">ネタが思いついたりいいネタをくれたらやります。</p>
+</div>
+<p></p>
+<div class="カード">
+<p class="Q">Sさん　100億円手に入ったらなにに使う？</p>
+<p class="A">とりあえず自分が一般人って自覚するためにクーポン使って釜玉うどん食べます。</p>
+</div>
+<p></p>
+<div class="カード">
+<p class="Q">Sさん　和、洋、中華　何食べたい？</p>
+<p class="A">釜玉うどんを食べるので和食がいいです。</p>
+</div>
+<p></p>
+<div class="カード">
+<p class="Q">Mさん　自分がポケモンだとしたら何タイプ？</p>
+<p class="A">お風呂から出れないので水タイプです。</p>
+</div>
+<p></p>
+<div class="カード">
+<p class="Q">Sさん　マイクラで一番嫌いなモブは？</p>
+<p class="A">ストレイ。</p>
+</div>
+<p></p>
+<div class="カード">
+<p class="Q">Sさん　好きなゲームジャンルは？</p>
+<p class="A">放置ゲームです。</p>
+
+
+</div>
+<p></p>
+<div id="cursor-text">👍</div>
+<script>
+  const text = document.getElementById("cursor-text");
+
+  let x = 0, y = 0;
+  let targetX = 0, targetY = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+  });
+
+  function animate() {
+    x += (targetX - x) * 0.05;
+    y += (targetY - y) * 0.05;
+
+    text.style.left = x + "px";
+    text.style.top = y + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+  <script src="JAVA.js"></script>
+</body>
+</html>

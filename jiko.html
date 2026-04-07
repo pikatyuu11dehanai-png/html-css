@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+ <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>めたもん！</title>
+
+</head>
+<body>
+<nav class="ppap">
+  <ul>
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="jiko.html">自己紹介</a></li>
+    <li><a href="sakuhin.html">作品</a></li>
+    <li><a href="gimiku.html">ギミック</a></li>
+  <li><a href="situmon.html">質問</a></li>
+    <li><a href="sonota.html">その他</a></li>
+  </ul>
+</nav>
+<h1 class='metamon'>自己紹介</h1>
+<p class="ziko">名前はめたもん、観相昆布、パブロ・ディエゴ・ホセ・フランシスコ・
+  デ・パウラ・ホアン・ネポムセーノ･マリーア・デ・ロス・レメディオス
+  ・クリスピン・クリスピアーノ・デ・ラ・サンディシマ・トリニダード
+  ･ルイス・イ・ピカソとかがあるので、できればパブロ・ディエゴ・ホセ
+  ・フランシスコ・デ・パウラ・ホアン・ネポムセーノ･マリーア・デ・ロ
+  ス・レメディオス・クリスピン・クリスピアーノ・デ・ラ・サンディシマ
+  ・トリニダード･ルイス・イ・ピカソか、寿限無、寿限無、五劫のすりきれ
+  、海砂利水魚の、水行末・雲来末・風来末、食う寝る処に住む処、やぶら
+  こうじのぶらこうじ、パイポパイポ・パイポのシューリンガン、シューリ
+  ンガンのグーリンダイ、グーリンダイのポンポコピーのポンポコナの長久
+  命の長助って呼んでほしいです。めたもんでもいいです。あでもやっぱ
+観相昆布のほうがいいかも。まあなんでもいいや。なんでもいいです。
+
+
+趣味はめたもんを眺めること、めたもんのお世話をすること、めたもんとゲーム
+することです。ちなみにめたもんは飼ってません。あと絵描きます。プログラミングも
+します。ゲームします。
+
+好きな食べ物はうどんです。特に釜玉うどんが好きです。丸亀の。
+でも鮭のほうが好きだ。鮭はうまい。あれ鮭お茶漬けにして大量の大根おろし
+と食べるとめっちゃ美味いです。
+
+嫌いな食べ物はきのことこんにゃくです。こんにゃくは頑張れば食べれるけど
+きのこだけはどう頑張っても食べれません。しいたけ以外。
+
+
+
+他の細かいことなどは質問で答えてます。質問したい方はその他に質問募集フォーム
+があるのでそこから答えてください。</p>
+<div id="cursor-text">👍</div>
+<script>
+  const text = document.getElementById("cursor-text");
+
+  let x = 0, y = 0;
+  let targetX = 0, targetY = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+  });
+
+  function animate() {
+    x += (targetX - x) * 0.05;
+    y += (targetY - y) * 0.05;
+
+    text.style.left = x + "px";
+    text.style.top = y + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+  <script src="JAVA.js"></script>
+</body>
+</html>
