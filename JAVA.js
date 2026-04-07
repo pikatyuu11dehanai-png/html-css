@@ -1,3 +1,4 @@
+console.log('てすと');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -5,16 +6,13 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-const btn = document.getElementById("go");
 
-btn.addEventListener("click", () => {
-  window.location.href = "https://www.hackforplay.xyz/users/otcm5ggCSyZCmnDW7D4M389BXE12";
-});
+
 let point = 0;
 let pointふえる = 1;
 const area = document.getElementById("click-area");
 const score = document.getElementById("score");
-
+if(area){
 area.addEventListener("click", (e) => {
   point += pointふえる;              // ← 数値を増やす
   score.textContent = point+'pt';  // ← 画面に反映！！
@@ -56,14 +54,16 @@ plus.textContent = "+10pt";
 
 
 });
-const targetDate = new Date("2026-04-1T00:00:00+00:00");
+}
+
+const targetDate = new Date("2026-04-29T00:00:00+00:00");
 
 function updateCountdown() {
   const now = new Date();
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    document.getElementById("countdown").textContent = "今日からめたもんが世界を支配するらしい…";
+    document.getElementById("countdown").textContent = "休みだ！！！！！っしゃ！！！！！！！！";
     return;
   }
 
@@ -74,7 +74,7 @@ function updateCountdown() {
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
 
   document.getElementById("countdown").textContent =
-    `エイプリルフールまで、あと ${syuu}週間${hiniti}日${hours}時間 ${minutes}分 ${seconds}秒`;
+    `ゴールデンウィークまで、あと ${syuu}週間${hiniti}日${hours}時間 ${minutes}分 ${seconds}秒`;
 
 }
 
@@ -223,3 +223,25 @@ if(metamon===1){
    navigator.clipboard.writeText('俺！俺だけどさ、運転してたら妊婦を酷いけがさせちゃって、そこから流産したから、慰謝料として100万円必要なんだ…50万円だけでいいし、ちゃんと返すから貸してくれないか？');
 }
 });
+
+
+/*imgs.forEach(img => {
+  const angle = Math.random() * 300 - 300;
+  img.dataset.angle = angle;
+  img.style.transform = `rotate(${angle}deg)`;
+
+ img.addEventListener("mouseenter", () => {
+    img.style.transform = `scale(1.2) rotate(${angle}deg)`;
+  });
+
+  img.addEventListener("mouseleave", () => {
+    img.style.transform = `scale(1) rotate(${angle}deg)`;
+  });
+});*/
+
+/*const images = document.querySelector(".wao");
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");*/
+
+
+

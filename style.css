@@ -71,7 +71,11 @@ p {
   100% { transform: translateY(0) rotate(0deg); }
 }
 
-.metamon {
+.metamon { 
+   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.5);
+ border-radius: 15px;
+ 
    
     text-align: center;
 
@@ -139,6 +143,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 40px;
 }
 
@@ -294,4 +299,150 @@ animation: aaaaa 0.5s 1 ease;
    0% { transform: scale(1)  }
      50% { transform: scale(1.5)  }
   100% { transform: scale(1)  }
+}
+.ppap{
+   position: fixed;
+   top: 0;
+  left: 0;
+  color: rgb(124, 172, 172);
+  background: #f5f1f1;
+    border: none;
+  border-radius: 12px;
+   padding: 10px 10px;
+}
+.uwa{
+  font-size : 30px;
+   color: rgb(90, 114, 137);
+}
+
+
+/*.wao img:hover {
+  transform: scale(1.8);
+}*/
+.wowo{
+ display: grid;
+   grid-template-columns: repeat(1, 1fr);
+gap:80px;
+    background: #f5f1f1;
+      border-radius: 12px;
+         padding: 10px 10px;
+}
+
+.wao{
+display: grid;
+  grid-template-columns: repeat(3, 1fr);
+gap:100px;
+
+}
+.wao{
+display: grid;
+  grid-template-columns: repeat(3, 1fr);
+gap:10px;
+
+}
+.ああ{
+  opacity: 0.5;
+transition: cubic-bezier(0.5, 0.01, 0.1, 1) 0.5s;;
+
+}
+.ああ:hover{
+    opacity: 1;
+transform: scale(1.1);
+}
+p{
+  white-space: pre-line;
+}
+.カード{
+  position: relative;
+}
+a{
+     display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.カード::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  border-radius: 15px;
+  z-index: -1;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    pointer-events: none;
+    transition: transform 1s;
+      
+  
+}
+.カード:hover{
+
+ box-shadow: 0 20px 40px rgba(1,1,0,0.2);
+   transform: scale(1.01);
+}
+
+/*.ziko{
+position: absolute;
+  left: 800px;
+  top: 80px;
+}*/
+
+/*.aaww{
+   display: flex;
+  flex-direction: column;
+  gap: 10px;
+    left: 600px;
+  top: 80px;
+}*/
+.aaww{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/*.aaww{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  position: absolute;
+      left: 600px;
+  top: 80px;
+  }*/
+.kado::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  border-radius: 15px;
+  z-index: -1;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    pointer-events: none;
+    transition: transform 1s;
+  
+}
+.kado:hover{
+
+ box-shadow: 0 20px 40px rgba(1,1,0,0.2);
+   transform: scale(1.01);
+}
+.container{
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+.A{
+    opacity: 0.5;
+    filter: blur(8px);
+}
+.A:hover{
+      opacity: 1;
+    filter: blur(0px);
+}
+.Q{
+  font-size: 20px;
+}
+.ziko{
+   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.5);
+ border-radius: 15px;
+
+}
+.ぼたん{
+    font-size: 20px;
 }
