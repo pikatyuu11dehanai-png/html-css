@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+ <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>めたもん！</title>
+
+</head>
+<body>
+<nav class="ppap">
+  <ul>
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="jiko.html">自己紹介</a></li>
+    <li><a href="sakuhin.html">作品</a></li>
+    <li><a href="gimiku.html">ギミック</a></li>
+  <li><a href="situmon.html">質問</a></li>
+
+    <li><a href="sonota.html">その他</a></li>
+  </ul>
+</nav>
+    <h1 class="metamon">その他</h1>
+    <h3>在庫処分の文字をクリックするとフォーム等に飛びます。</h3>
+<a href="https://forms.gle/8fU87N2QbAvm14nH7">
+
+  
+　　<h2>質問募集フォーム</h2>
+
+</a>
+<a href="https://forms.gle/fveipXuadcUpXcs29">
+
+  
+　　<h2>お問い合わせ</h2>
+
+</a>
+<div id="cursor-text">👍</div>
+<script>
+  const text = document.getElementById("cursor-text");
+
+  let x = 0, y = 0;
+  let targetX = 0, targetY = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+  });
+
+  function animate() {
+    x += (targetX - x) * 0.05;
+    y += (targetY - y) * 0.05;
+
+    text.style.left = x + "px";
+    text.style.top = y + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+  <script src="JAVA.js"></script>
+</body>
+</html>
